@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        .box {
+            width: 450px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        a {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome, <%= username %>!</h1>
+
+    <hr>
+
+    <div class="box">
+
+        <p>
+            <strong>Your session ID:</strong>
+            <%= sessionID %>
+        </p>
+
+        <p>
+            You have visited this page
+            <strong><%= visitCount %></strong>
+            times during this session.
+        </p>
+
+    </div>
+
+    <br>
+
+    <a href="/dashboard">Refresh Dashboard</a>
+
+    <a href="/logout">Logout</a>
+
+</body>
+</html>

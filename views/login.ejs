@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        .login-box {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Login</h1>
+
+    <hr>
+
+    <% if (error) { %>
+        <p class="error"><%= error %></p>
+    <% } %>
+
+    <div class="login-box">
+
+        <form action="/login" method="POST">
+
+            <label>Username:</label>
+            <input type="text" name="username">
+
+            <label>Password:</label>
+            <input type="password" name="password">
+
+            <button type="submit">Login</button>
+
+        </form>
+
+    </div>
+
+    <br>
+
+    <p>Demo Username: <b>admin</b></p>
+    <p>Demo Password: <b>1234</b></p>
+
+    <br>
+
+    <a href="/">Go Home</a>
+
+</body>
+</html>
